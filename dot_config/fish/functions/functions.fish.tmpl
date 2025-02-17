@@ -1,0 +1,64 @@
+# allows CTRL + Backspace/DEL to delete words in terminals
+function fish_user_key_bindings
+  # ctrl + backspace to delete previous word
+  bind \cW backward-kill-word
+end
+
+# create jira ticket
+function jira_create
+    jira issue create -t"Dev Task" --custom team={{ (bitwardenFields "item" "id.atlassian.com").infra_team_id.value }} -s""$argv"" --web
+end
+
+# list my jira tickets
+function jira_list
+    jira issue list --assignee $(jira me) -s~Done -s~Closed -t~Epic
+end
+
+# tailscale up
+function tsup
+    if test -n "$argv"
+        if test $argv[1] = "exit"
+            set EXIT_NODE_FLAG "--exit-node=gb-mnc-wg-005.mullvad.ts.net --exit-node-allow-lan-access=true"
+        else if test $argv[1] = "lon"
+            set EXIT_NODE_FLAG "--exit-node=gb-lon-wg-002.mullvad.ts.net --exit-node-allow-lan-access=true"
+        else if test $argv[1] = "man"
+            set EXIT_NODE_FLAG "--exit-node=gb-mnc-wg-003.mullvad.ts.net --exit-node-allow-lan-access=true"
+        else
+            set EXIT_NODE_FLAG "--reset"
+        end
+    else
+        set EXIT_NODE_FLAG "--reset"
+    end
+
+    if command -v tailscale >/dev/null
+        echo tailscale up $EXIT_NODE_FLAG
+    else if command -v /Applications/Tailscale.app/Contents/MacOS/Tailscale >/dev/null
+        echo /Applications/Tailscale.app/Contents/MacOS/Tailscale up $EXIT_NODE_FLAG
+    else
+        echo "tailscale not installed"
+    end
+end
+
+# commit and push
+function cap
+    set -l message "$argv"
+
+    if test -z "$argv"
+        echo "no commit message given"
+        return 1
+    end
+
+    if string match -q "*oneid*" (pwd)
+        if test (git branch --show-current) = "main" || test (git branch --show-current) = "master"
+            echo "you're on main, you pleb."
+            return 1
+        end
+    end
+
+    git add . && git commit -m "$message" && git push -u origin (git rev-parse --abbrev-ref HEAD)
+end
+
+# kubecolor
+function kubectl --wraps kubectl
+  command kubecolor $argv
+end

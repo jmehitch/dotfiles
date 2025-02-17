@@ -1,0 +1,42 @@
+# aliases
+source $HOME/.config/fish/alias.fish
+
+# disable fish greeting
+set -g fish_greeting
+
+# set default editor to Vim
+set -gx EDITOR vim
+
+# yamllint config path
+set -gx YAMLLINT_CONFIG_FILE "$HOME/.config/.yamllint"
+
+# configure brew paths
+if test -d /home/linuxbrew/.linuxbrew # ubuntu
+    set -gx HOMEBREW_PREFIX "/home/linuxbrew/.linuxbrew"
+    set -gx HOMEBREW_CELLAR "$HOMEBREW_PREFIX/Cellar"
+    set -gx HOMEBREW_REPOSITORY "$HOMEBREW_PREFIX/Homebrew"
+else if test -d /opt/homebrew # macos
+    set -gx HOMEBREW_PREFIX "/opt/homebrew"
+    set -gx HOMEBREW_CELLAR "$HOMEBREW_PREFIX/Cellar"
+    set -gx HOMEBREW_REPOSITORY "$HOMEBREW_PREFIX/homebrew"
+end
+fish_add_path -gP "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin"
+
+# mise
+if status is-interactive
+    ~/.local/bin/mise activate fish | source
+else
+    ~/.local/bin/mise activate fish --shims | source
+end
+
+# activate zoxide
+zoxide init fish | source
+
+# activate starship
+starship init fish | source
+
+# task fish completions
+task --completion fish | source
+
+# jira api token
+set -gx JIRA_API_TOKEN {{ (bitwardenFields "item" "id.atlassian.com").api_token.value }}

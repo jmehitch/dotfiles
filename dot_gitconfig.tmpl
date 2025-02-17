@@ -1,0 +1,40 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Jamie Hitchen
+    email = 25344048+jmehitch@users.noreply.github.com
+    signingkey = {{ (bitwardenFields "item" "github-gpg-key").key_id.value }} # TODO: create separate dotfiles bitwarden account
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[interactive]
+    diffFilter = delta --color-only
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[delta]
+    line-numbers = true
+    side-by-side = true
+    features = interactivepager custom-colors
+
+[delta "custom-colors"]
+    plus-non-emph-style = syntax "#006400"
+    plus-style = syntax "#006400"
+    plus-empty-line-marker-style = syntax "#006400"
+
+[pull]
+    rebase = true
+
+[push]
+    autoSetupRemote = true
+
+[commit]
+    gpgsign = true
+
+[init]
+    defaultBranch = main

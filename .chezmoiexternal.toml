@@ -1,0 +1,36 @@
+[".vim/bundle/nerdtree"]
+    type = "git-repo"
+	url = "https://github.com/preservim/nerdtree.git"
+    refreshPeriod = "672h"
+[".vim/bundle/vim-pathogen"]
+    type = "git-repo"
+	url = "https://github.com/tpope/vim-pathogen.git"
+    refreshPeriod = "672h"
+[".vim/bundle/vim-airline"]
+    type = "git-repo"
+	url = "https://github.com/vim-airline/vim-airline"
+    refreshPeriod = "672h"
+[".vim/bundle/vim-airline-themes"]
+    type = "git-repo"
+	url = "https://github.com/vim-airline/vim-airline-themes"
+    refreshPeriod = "672h"
+[".vim/bundle/indentLine.vim"]
+    type = "git-repo"
+	url = "https://github.com/Yggdroot/indentLine.git"
+    refreshPeriod = "672h"
+[".vim/bundle/ale"]
+    type = "git-repo"
+	url = "https://github.com/dense-analysis/ale.git"
+    refreshPeriod = "672h"
+[".vim/pack/plugins/start/vim-go"]
+    type = "git-repo"
+	url = "https://github.com/fatih/vim-go.git"
+    refreshPeriod = "672h"
+[".vim/pack/airblade/start/vim-gitgutter"]
+    type = "git-repo"
+	url = "https://github.com/airblade/vim-gitgutter.git"
+    refreshPeriod = "672h"
+[".tmux/kube-tmux"]
+    type = "git-repo"
+	url = "git@github.com:jonmosco/kube-tmux.git"
+    refreshPeriod = "672h"

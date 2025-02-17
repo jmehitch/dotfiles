@@ -1,0 +1,31 @@
+[tools]
+# core
+go = "latest"
+python = "latest"
+rust = "latest"
+node = "latest"
+# aqua
+"aqua:jqlang/jq" = "latest"
+"aqua:stern/stern" = "latest"
+"aqua:a8m/envsubst" = "latest"
+"aqua:go-task/task" = "latest"
+"aqua:cli/cli" = "latest" # gh
+"aqua:junegunn/fzf" = "latest"
+# ubi
+"ubi:dandavison/delta" = "latest"
+"ubi:ajeetdsouza/zoxide" = "latest"
+# go
+"go:github.com/kubecolor/kubecolor" = "latest"
+"go:github.com/ankitpokhrel/jira-cli/cmd/jira" = "latest"
+# cargo
+"cargo:starship" = "latest"
+"cargo:bat" = "latest"
+# npm
+"npm:@infisical/cli" = "latest"
+"npm:@bitwarden/cli" = "latest"
+# pipx
+"pipx:yamllint" = "latest"
+"pipx:icdiff" = "latest"
+
+[settings]
+experimental = true
