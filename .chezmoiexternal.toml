@@ -30,6 +30,10 @@
     type = "git-repo"
 	url = "https://github.com/airblade/vim-gitgutter.git"
     refreshPeriod = "672h"
+[".vim/colors/wombat256mod.vim"]
+    type = "file"
+	url = "https://www.vim.org/scripts/download_script.php?src_id=13400"
+    refreshPeriod = "672h"
 [".tmux/kube-tmux"]
     type = "git-repo"
 	url = "git@github.com:jonmosco/kube-tmux.git"
