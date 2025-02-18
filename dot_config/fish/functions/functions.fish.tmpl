@@ -6,7 +6,7 @@ end
 
 # create jira ticket
 function jira_create
-    jira issue create -t"Dev Task" --custom team={{ (bitwardenFields "item" "id.atlassian.com").infra_team_id.value }} -s""$argv"" --web
+    jira issue create -t"Dev Task" --custom team={{ (bitwardenFields "item" "atlassian-creds").infra_team_id.value }} -s""$argv"" --web
 end
 
 # list my jira tickets
@@ -14,15 +14,26 @@ function jira_list
     jira issue list --assignee $(jira me) -s~Done -s~Closed -t~Epic
 end
 
+# tailscale alias
+function ts
+    if command -v tailscale >/dev/null
+        tailscale $argv
+    else if command -v /Applications/Tailscale.app/Contents/MacOS/Tailscale >/dev/null
+        /Applications/Tailscale.app/Contents/MacOS/Tailscale $argv
+    else
+        "tailscale not installed"
+    end
+end
+
 # tailscale up
 function tsup
     if test -n "$argv"
         if test $argv[1] = "exit"
-            set EXIT_NODE_FLAG "--exit-node=gb-mnc-wg-005.mullvad.ts.net --exit-node-allow-lan-access=true"
+            set EXIT_NODE_FLAG --exit-node=gb-mnc-wg-001.mullvad.ts.net --exit-node-allow-lan-access=true
         else if test $argv[1] = "lon"
-            set EXIT_NODE_FLAG "--exit-node=gb-lon-wg-002.mullvad.ts.net --exit-node-allow-lan-access=true"
+            set EXIT_NODE_FLAG --exit-node=gb-lon-wg-003.mullvad.ts.net --exit-node-allow-lan-access=true
         else if test $argv[1] = "man"
-            set EXIT_NODE_FLAG "--exit-node=gb-mnc-wg-003.mullvad.ts.net --exit-node-allow-lan-access=true"
+            set EXIT_NODE_FLAG --exit-node=gb-mnc-wg-001.mullvad.ts.net --exit-node-allow-lan-access=true
         else
             set EXIT_NODE_FLAG "--reset"
         end
@@ -31,11 +42,11 @@ function tsup
     end
 
     if command -v tailscale >/dev/null
-        echo tailscale up $EXIT_NODE_FLAG
+        tailscale up $EXIT_NODE_FLAG
     else if command -v /Applications/Tailscale.app/Contents/MacOS/Tailscale >/dev/null
-        echo /Applications/Tailscale.app/Contents/MacOS/Tailscale up $EXIT_NODE_FLAG
+        /Applications/Tailscale.app/Contents/MacOS/Tailscale up $EXIT_NODE_FLAG
     else
-        echo "tailscale not installed"
+        "tailscale not installed"
     end
 end
 

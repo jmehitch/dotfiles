@@ -39,4 +39,4 @@ starship init fish | source
 task --completion fish | source
 
 # jira api token
-set -gx JIRA_API_TOKEN {{ (bitwardenFields "item" "id.atlassian.com").api_token.value }}
+set -gx JIRA_API_TOKEN {{ (bitwardenFields "item" "atlassian-creds").api_token.value }}
