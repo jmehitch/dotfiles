@@ -21,7 +21,6 @@ node = "latest"
 "cargo:starship" = "latest"
 "cargo:bat" = "latest"
 # npm
-"npm:@infisical/cli" = "latest"
 "npm:@bitwarden/cli" = "latest"
 # pipx
 "pipx:yamllint" = "latest"
