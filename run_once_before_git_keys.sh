@@ -5,7 +5,7 @@ set -e
 eval "$(~/.local/bin/mise activate bash)"
 mise use -g aqua:cli/cli aqua:jqlang/jq npm:@bitwarden/cli
 
-if [[ ! -f ~/.ssh/key ]]; then
+if [[ ! -f ~/.ssh/id_ed25519 ]]; then
     gh auth login -h github.com -s admin:public_key -s write:gpg_key
     bw get item ssh-key | jq -r '.sshKey.publicKey' > ~/.ssh/id_ed25519.pub
     bw get item ssh-key | jq -r '.sshKey.privateKey' > ~/.ssh/id_ed25519
