@@ -1,4 +1,20 @@
 packages:
+  linux:
+    apt:
+      - curl
+      - wget
+      - git
+      - gpg
+      - gnupg-agent
+      - software-properties-common
+      - mosh
+      - cmake
+      - coreutils
+      - tree
+      - htop
+      - tmux
+      - vim
+
   darwin:
     taps:
       - homebrew/bundle

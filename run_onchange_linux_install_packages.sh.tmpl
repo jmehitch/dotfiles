@@ -1,0 +1,7 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+sudo apt-get update -y
+{{ range .packages.linux.apt -}}
+sudo apt-get install -y {{ . | quote }}
+{{ end -}}
+{{ end -}}
