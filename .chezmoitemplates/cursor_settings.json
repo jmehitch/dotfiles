@@ -1,0 +1,80 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "extensions.ignoreRecommendations": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.preferredDarkColorTheme": "GitHub Dark",
+    "workbench.preferredLightColorTheme": "GitHub Light",
+    "window.autoDetectHighContrast": false,
+    "window.autoDetectColorScheme": true,
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontFamily": "InconsolataGo Nerd Font Mono",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.copyOnSelection": true,
+    "editor.fontFamily": "InconsolataGo Nerd Font Mono",
+    "editor.fontSize": 14,
+    "editor.accessibilitySupport": "off",
+    "editor.formatOnSave": false,
+    "editor.cursorStyle": "line-thin",
+    "editor.suggestSelection": "first",
+    "editor.minimap.enabled": false,
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 100,
+    "go.useLanguageServer": true,
+    "go.formatTool": "goimports",
+    "go.toolsManagement.autoUpdate": true,
+    "[javascript]": {
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[terraform]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.tabSize": 2
+    },
+    "[markdown]": {
+        "editor.rulers": [
+            100
+        ],
+        "rewrap.autoWrap.enabled": true,
+        "rewrap.wrappingColumn": 100
+    },
+    "redhat.telemetry.enabled": false,
+    "markdown-preview-enhanced.previewTheme": "github-light.css",
+    "vs-kubernetes": {
+        "vs-kubernetes.crd-code-completion": "disabled"
+    },
+    "git.autofetch": true,
+    "chat.editor.fontSize": 14,
+    "editor.codeLensFontSize": 1,
+    "cSpell.dark": {},
+    "cSpell.allowCompoundWords": true,
+    "cSpell.userWords": [
+        "consentconsole",
+        "ctxutils",
+        "endtoend",
+        "firestore",
+        "GOBIN",
+        "GOPKG",
+        "idpconfig",
+        "managementconsole",
+        "myoneid",
+        "oneid",
+        "rpconfig",
+        "taskfile"
+    ],
+    "githubPullRequests.pullBranch": "never"
+}
