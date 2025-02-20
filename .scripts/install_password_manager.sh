@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -ex
+set -e
 
 # exit immediately if bitwarden-cli is already in $PATH
 type bw >/dev/null 2>&1 && exit
