@@ -4,10 +4,7 @@ eval "$(~/.local/bin/mise activate bash)"
 mise use -g gh jq npm:@bitwarden/cli
 
 if [[ ! -f ~/.ssh/key ]]; then
-    if ! gh auth status > /dev/null 2>&1; then
-        gh auth login -h github.com -s admin:public_key -s write:gpg_key
-    fi
-
+    gh auth login -h github.com -s admin:public_key -s write:gpg_key
     bw get item ssh-key | jq -r '.sshKey.publicKey' > ~/.ssh/key.pub
     bw get item ssh-key | jq -r '.sshKey.privateKey' > ~/.ssh/key
     sudo chmod 600 ~/.ssh/key
