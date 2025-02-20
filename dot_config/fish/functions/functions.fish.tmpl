@@ -41,13 +41,7 @@ function tsup
         set EXIT_NODE_FLAG "--reset"
     end
 
-    if command -v tailscale >/dev/null
-        tailscale up $EXIT_NODE_FLAG
-    else if command -v /Applications/Tailscale.app/Contents/MacOS/Tailscale >/dev/null
-        /Applications/Tailscale.app/Contents/MacOS/Tailscale up $EXIT_NODE_FLAG
-    else
-        "tailscale not installed"
-    end
+    ts up $EXIT_NODE_FLAG
 end
 
 # commit and push
