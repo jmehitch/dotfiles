@@ -1,2 +1,5 @@
 [hooks.read-source-state.pre]
     command = ".local/share/chezmoi/.scripts/install_password_manager.sh"
+
+[hooks.apply.pre]
+    command = ".local/share/chezmoi/.scripts/bw_configure.sh"
