@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Check if already logged in
+if ! bw login --check > /dev/null 2>&1; then
+    bw config server https://vault.bitwarden.eu
+    bw login
+fi
+
 if [[ ! -f ~/.ssh/id_ed25519 ]]; then
     if ! gh auth status > /dev/null 2>&1; then
         gh auth login -h github.com -s admin:public_key -s write:gpg_key
@@ -21,3 +27,5 @@ if [[ $(gpg --list-keys | grep uid | grep jmehitch | wc -l) -eq 0 ]]; then
     fi
     rm public.gpg
 fi
+
+chezmoi apply
