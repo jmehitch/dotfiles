@@ -1,7 +1,7 @@
 #!/bin/bash
 
 eval "$(~/.local/bin/mise activate bash)"
-mise use -g gh jq bw
+mise use -g gh jq npm:@bitwarden/cli
 
 if [[ ! -f ~/.ssh/key ]]; then
     if ! gh auth status > /dev/null 2>&1; then
