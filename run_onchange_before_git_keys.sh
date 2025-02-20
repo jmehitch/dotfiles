@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [[ ! -f ~/.ssh/key ]]; then
     if ! gh auth status > /dev/null 2>&1; then
         gh auth login -h github.com -s admin:public_key -s write:gpg_key
