@@ -3,7 +3,7 @@
 set -e
 
 eval "$(~/.local/bin/mise activate bash)"
-mise use -g gh jq npm:@bitwarden/cli
+mise use -g aqua:cli/cli aqua:jqlang/jq npm:@bitwarden/cli
 
 if [[ ! -f ~/.ssh/key ]]; then
     gh auth login -h github.com -s admin:public_key -s write:gpg_key
