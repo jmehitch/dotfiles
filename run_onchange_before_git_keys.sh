@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 eval "$(~/.local/bin/mise activate bash)"
 mise use -g gh jq npm:@bitwarden/cli
 
