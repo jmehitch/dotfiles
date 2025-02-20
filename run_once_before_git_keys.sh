@@ -7,10 +7,10 @@ mise use -g aqua:cli/cli aqua:jqlang/jq npm:@bitwarden/cli
 
 if [[ ! -f ~/.ssh/key ]]; then
     gh auth login -h github.com -s admin:public_key -s write:gpg_key
-    bw get item ssh-key | jq -r '.sshKey.publicKey' > ~/.ssh/key.pub
-    bw get item ssh-key | jq -r '.sshKey.privateKey' > ~/.ssh/key
-    sudo chmod 600 ~/.ssh/key
-    gh ssh-key add -t jamie ~/.ssh/key.pub
+    bw get item ssh-key | jq -r '.sshKey.publicKey' > ~/.ssh/id_ed25519.pub
+    bw get item ssh-key | jq -r '.sshKey.privateKey' > ~/.ssh/id_ed25519
+    sudo chmod 600 ~/.ssh/id_ed25519
+    gh ssh-key add -t jamie ~/.ssh/id_ed25519.pub
 fi
 
 if [[ $(gpg --list-keys | grep uid | grep jmehitch | wc -l) -eq 0 ]]; then
