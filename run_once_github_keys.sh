@@ -4,7 +4,7 @@ gh auth login -h github.com -s admin:public_key -s write:gpg_key
 
 bw get item ssh-key | jq -r '.sshKey.publicKey' > ~/.ssh/id_ed25519.pub
 bw get item ssh-key | jq -r '.sshKey.privateKey' > ~/.ssh/id_ed25519
-chmod 600 ~/.ssh/id_ed25519
+sudo chmod 600 ~/.ssh/id_ed25519
 gh ssh-key add -t jamie ~/.ssh/id_ed25519.pub
 
 bw get notes github-gpg-key > private.key
