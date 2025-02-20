@@ -14,12 +14,11 @@ node = "latest"
 # ubi
 "ubi:dandavison/delta" = "latest"
 "ubi:ajeetdsouza/zoxide" = "latest"
+"ubi:starship/starship" = "latest"
+"ubi:sharkdp/bat" = "latest"
 # go
 "go:github.com/kubecolor/kubecolor" = "latest"
 "go:github.com/ankitpokhrel/jira-cli/cmd/jira" = "latest"
-# cargo
-"cargo:starship" = "latest"
-"cargo:bat" = "latest"
 # npm
 "npm:@bitwarden/cli" = "latest"
 # pipx
