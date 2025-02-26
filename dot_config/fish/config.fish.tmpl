@@ -38,5 +38,7 @@ starship init fish | source
 # task fish completions
 task --completion fish | source
 
+{{ if eq .chezmoi.os "darwin" -}}
 # jira api token
 set -gx JIRA_API_TOKEN {{ (bitwardenFields "item" "atlassian-creds").api_token.value }}
+{{ end -}}

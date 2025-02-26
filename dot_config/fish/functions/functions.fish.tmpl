@@ -4,16 +4,6 @@ function fish_user_key_bindings
   bind \cW backward-kill-word
 end
 
-# create jira ticket
-function jira_create
-    jira issue create -t"Dev Task" --custom team={{ (bitwardenFields "item" "atlassian-creds").infra_team_id.value }} -s""$argv"" --web
-end
-
-# list my jira tickets
-function jira_list
-    jira issue list --assignee $(jira me) -s~Done -s~Closed -t~Epic
-end
-
 # tailscale alias
 function ts
     if command -v tailscale >/dev/null
@@ -67,3 +57,15 @@ end
 function kubectl --wraps kubectl
   command kubecolor $argv
 end
+
+{{ if eq .chezmoi.os "darwin" -}}
+# create jira ticket
+function jira_create
+    jira issue create -t"Dev Task" --custom team={{ (bitwardenFields "item" "atlassian-creds").infra_team_id.value }} -s""$argv"" --web
+end
+
+# list my jira tickets
+function jira_list
+    jira issue list --assignee $(jira me) -s~Done -s~Closed -t~Epic
+end
+{{ end -}}
