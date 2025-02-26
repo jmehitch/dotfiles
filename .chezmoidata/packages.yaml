@@ -51,6 +51,7 @@ packages:
       - ghostty
       - hiddenbar
       - jumpcut
+      - megasync
       - microsoft-teams
       - slack
       - spectacle
