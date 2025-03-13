@@ -9,6 +9,7 @@
     "workbench.preferredLightColorTheme": "GitHub Light",
     "window.autoDetectHighContrast": false,
     "window.autoDetectColorScheme": true,
+    "terminal.integrated.defaultProfile.osx": "tmux",
     "terminal.integrated.fontSize": 15,
     "terminal.integrated.fontFamily": "InconsolataGo Nerd Font Mono",
     "terminal.integrated.cursorBlinking": true,
