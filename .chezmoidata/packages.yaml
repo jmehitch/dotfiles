@@ -43,6 +43,7 @@ packages:
       - tree
       - watch
       - wget
+      - ffmpeg
     casks:
       - brave-browser
       - cursor
@@ -57,6 +58,7 @@ packages:
       - spectacle
       - stats
       - vscodium
+      - vlc
     mas:
       - app: Amphetamine
         id: 937984704
