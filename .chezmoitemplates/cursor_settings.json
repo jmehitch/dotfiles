@@ -17,7 +17,6 @@
     "editor.fontFamily": "InconsolataGo Nerd Font Mono",
     "editor.fontSize": 14,
     "editor.accessibilitySupport": "off",
-    "editor.formatOnSave": false,
     "editor.cursorStyle": "line-thin",
     "editor.suggestSelection": "first",
     "editor.minimap.enabled": false,
@@ -30,7 +29,8 @@
     "go.formatTool": "goimports",
     "go.toolsManagement.autoUpdate": true,
     "[javascript]": {
-        "editor.detectIndentation": false,
+        "editor.formatOnSave": true,
+        "editor.detectIndentation": true,
         "editor.tabSize": 2,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -102,5 +102,6 @@
             "path": "tmux",
             "args": ["new-session", "-A", "-s", "cursor:${workspaceFolder}"]
         }
-    }
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false
 }

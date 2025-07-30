@@ -24,6 +24,7 @@ node = "latest"
 # pipx
 "pipx:yamllint" = "latest"
 "pipx:icdiff" = "latest"
+"ubi:yt-dlp/yt-dlp" = "latest"
 
 [settings]
 experimental = true
