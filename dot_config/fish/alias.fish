@@ -5,6 +5,7 @@ alias gd="git diff"
 alias gds="git diff --staged"
 alias ga="git add ."
 alias gc="git commit -m"
+alias gcsq="gitamend" # custom func
 alias gcm="git checkout main"
 alias gco="git checkout"
 alias gps="git push"

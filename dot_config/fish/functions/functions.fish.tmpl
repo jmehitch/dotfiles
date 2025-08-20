@@ -15,6 +15,15 @@ function ts
     end
 end
 
+# tailscale switch
+function tss
+    if test -n "$argv"
+        ts switch $argv
+    else
+        ts switch $(ts switch --list | grep -v ID | grep -v '*' | awk '{ print $3 }')
+    end
+end
+
 # tailscale up
 function tsup
     if test -n "$argv"
@@ -56,6 +65,35 @@ end
 # kubecolor
 function kubectl --wraps kubectl
   command kubecolor $argv
+end
+
+# amend previous git commit with current changes, preserving the message
+function gitamend
+    # ensure we are inside a git repository
+    if not git rev-parse --git-dir >/dev/null 2>/dev/null
+        echo "Error: Not in a git repository"
+        return 1
+    end
+
+    # if there are no staged or unstaged changes, exit early
+    if git diff-index --quiet HEAD --; and git diff --quiet
+        echo "No changes to commit"
+        return 0
+    end
+
+    # capture the previous commit message as a single string (preserve newlines)
+    set -l COMMIT_MSG (git log -1 --pretty=format:%B | string collect)
+
+    echo "Adding all changes..."
+    git add -A; or return $status
+
+    echo "Amending previous commit..."
+    printf "%s" "$COMMIT_MSG" | git commit --amend -F -; or return $status
+
+    echo "Successfully amended previous commit with current changes. Previous commit message preserved:"
+    echo "---"
+    printf "%s\n" "$COMMIT_MSG"
+    echo "---"
 end
 
 {{ if eq .chezmoi.os "darwin" -}}
