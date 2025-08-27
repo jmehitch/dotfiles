@@ -28,11 +28,11 @@ end
 function tsup
     if test -n "$argv"
         if test $argv[1] = "exit"
-            set EXIT_NODE_FLAG --exit-node=gb-mnc-wg-001.mullvad.ts.net --exit-node-allow-lan-access=true
+            set EXIT_NODE_FLAG --exit-node=$(ts exit-node list --filter=uk | grep mnc | tail -n 1 | awk '{ print $ 2 }') --exit-node-allow-lan-access=true
         else if test $argv[1] = "lon"
-            set EXIT_NODE_FLAG --exit-node=gb-lon-wg-003.mullvad.ts.net --exit-node-allow-lan-access=true
+            set EXIT_NODE_FLAG --exit-node=$(ts exit-node list --filter=uk | grep lon | tail -n 1 | awk '{ print $ 2 }') --exit-node-allow-lan-access=true
         else if test $argv[1] = "man"
-            set EXIT_NODE_FLAG --exit-node=gb-mnc-wg-001.mullvad.ts.net --exit-node-allow-lan-access=true
+            set EXIT_NODE_FLAG --exit-node=$(ts exit-node list --filter=uk | grep mnc | tail -n 1 | awk '{ print $ 2 }') --exit-node-allow-lan-access=true
         else
             set EXIT_NODE_FLAG "--reset"
         end
