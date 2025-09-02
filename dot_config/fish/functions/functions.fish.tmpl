@@ -71,29 +71,23 @@ end
 function gitamend
     # ensure we are inside a git repository
     if not git rev-parse --git-dir >/dev/null 2>/dev/null
-        echo "Error: Not in a git repository"
+        echo "error: not in a git repository"
         return 1
     end
 
-    # if there are no staged or unstaged changes, exit early
-    if git diff-index --quiet HEAD --; and git diff --quiet
-        echo "No changes to commit"
+    # if there are no staged changes, exit early
+    if git diff --cached --quiet
+        echo "error: no staged changes to commit"
         return 0
     end
 
     # capture the previous commit message as a single string (preserve newlines)
     set -l COMMIT_MSG (git log -1 --pretty=format:%B | string collect)
 
-    echo "Adding all changes..."
-    git add -A; or return $status
-
-    echo "Amending previous commit..."
+    echo "amending previous commit..."
     printf "%s" "$COMMIT_MSG" | git commit --amend -F -; or return $status
 
-    echo "Successfully amended previous commit with current changes. Previous commit message preserved:"
-    echo "---"
-    printf "%s\n" "$COMMIT_MSG"
-    echo "---"
+    printf "added changes to previous commit: `%s`\n" "$COMMIT_MSG"
 end
 
 {{ if eq .chezmoi.os "darwin" -}}
