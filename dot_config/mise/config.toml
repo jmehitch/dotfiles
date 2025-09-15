@@ -14,8 +14,6 @@ node = "latest"
 "aqua:go-task/task" = "latest"
 "aqua:cli/cli" = "latest" # gh
 "aqua:junegunn/fzf" = "latest"
-# ubi
-"ubi:dandavison/delta" = "latest"
 "ubi:ajeetdsouza/zoxide" = "latest"
 "ubi:starship/starship" = "latest"
 "ubi:sharkdp/bat" = "latest"
@@ -29,3 +27,4 @@ node = "latest"
 # pipx
 "pipx:yamllint" = "latest"
 "pipx:icdiff" = "latest"
+"aqua:dandavison/delta" = "0.16.5" # pinned as workaround for this: https://github.com/dandavison/delta/pull/2034
