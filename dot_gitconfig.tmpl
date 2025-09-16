@@ -4,29 +4,6 @@
     email = 25344048+jmehitch@users.noreply.github.com
     signingkey = {{ (bitwardenFields "item" "github-gpg-key").key_id.value }}
 
-[pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
-
-[interactive]
-    diffFilter = delta --color-only
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
-
-[delta]
-    line-numbers = true
-    side-by-side = true
-    features = interactivepager custom-colors
-
-[delta "custom-colors"]
-    plus-non-emph-style = syntax "#006400"
-    plus-style = syntax "#006400"
-    plus-empty-line-marker-style = syntax "#006400"
-
 [pull]
     rebase = true
 
@@ -38,3 +15,23 @@
 
 [init]
     defaultBranch = main
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictStyle = zdiff3
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    line-numbers = true
+    side-by-side = true
+    features = custom-colors
+
+[delta "custom-colors"]
+    plus-non-emph-style = syntax "#006400"
+    plus-style = syntax "#006400"
+    plus-empty-line-marker-style = syntax "#006400"

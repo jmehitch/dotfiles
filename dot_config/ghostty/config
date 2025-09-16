@@ -2,4 +2,4 @@ font-family = InconsolataGo Nerd Font Mono
 font-size = 18
 copy-on-select = clipboard
 confirm-close-surface = false
-theme=light:iceberg-light,dark:Ghostty Default StyleDark
+theme=light:Bluloco Light,dark:Ghostty Default StyleDark
