@@ -103,5 +103,6 @@
             "args": ["new-session", "-A", "-s", "cursor:${workspaceFolder}"]
         }
     },
-    "editor.unicodeHighlight.ambiguousCharacters": false
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "cursor.composer.shouldChimeAfterChatFinishes": true
 }
