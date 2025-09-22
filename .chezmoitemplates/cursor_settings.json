@@ -58,7 +58,6 @@
         "vs-kubernetes.crd-code-completion": "disabled"
     },
     "git.autofetch": true,
-    "chat.editor.fontSize": 14,
     "editor.codeLensFontSize": 1,
     "cSpell.dark": {},
     "cSpell.allowCompoundWords": true,
@@ -104,5 +103,12 @@
         }
     },
     "editor.unicodeHighlight.ambiguousCharacters": false,
-    "cursor.composer.shouldChimeAfterChatFinishes": true
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "yaml.schemas": {
+        "https://www.schemastore.org/yamllint.json": [
+            "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/arc.yaml",
+            "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/loki.yaml",
+            "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/values/loki.yaml"
+        ]
+    }
 }
