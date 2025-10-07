@@ -110,5 +110,14 @@
             "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/loki.yaml",
             "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/values/loki.yaml"
         ]
+    },
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     }
 }

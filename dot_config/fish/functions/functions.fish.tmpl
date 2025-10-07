@@ -34,13 +34,14 @@ function tsup
         else if test $argv[1] = "man"
             set FLAG --exit-node=$(ts exit-node list --filter=uk | grep mnc | tail -n 1 | awk '{ print $ 2 }') --exit-node-allow-lan-access=true
         else
-            set FLAG "--accept-routes"
+            echo "arg $argv[1] not accepted."
+            return 1
         end
     else
         set FLAG "--accept-routes"
     end
 
-    echo ts up $FLAG
+    ts up --reset
     ts up $FLAG
 end
 
