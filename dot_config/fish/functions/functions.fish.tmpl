@@ -41,7 +41,7 @@ function tsup
         set FLAG "--accept-routes"
     end
 
-    ts up --reset
+    ts up --reset &> /dev/null
     ts up $FLAG
 end
 
