@@ -21,6 +21,8 @@ right_format = '$cmd_duration$kubernetes$gcloud$time$battery'
 
 add_newline = true
 
+command_timeout = 1000
+
 [directory]
 format = '[$path]($style)[$read_only]($read_only_style) '
 truncate_to_repo = false
