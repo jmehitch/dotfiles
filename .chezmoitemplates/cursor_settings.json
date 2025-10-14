@@ -108,7 +108,8 @@
         "https://www.schemastore.org/yamllint.json": [
             "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/arc.yaml",
             "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/loki.yaml",
-            "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/values/loki.yaml"
+            "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/values/loki.yaml",
+            "file:///Users/jamie/code/oneid/kubernetes/din-dev-lab/dev-lab-europe-west2/skaffold/infra/bank-id-redirect-vs.yaml"
         ]
     },
     "[dockercompose]": {
