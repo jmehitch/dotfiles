@@ -49,7 +49,7 @@
         "editor.rulers": [
             100
         ],
-        "rewrap.autoWrap.enabled": true,
+        "rewrap.autoWrap.enabled": false,
         "rewrap.wrappingColumn": 100
     },
     "redhat.telemetry.enabled": false,
@@ -109,7 +109,7 @@
             "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/arc.yaml",
             "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/loki.yaml",
             "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/values/loki.yaml",
-            "file:///Users/jamie/code/oneid/kubernetes/din-dev-lab/dev-lab-europe-west2/skaffold/infra/bank-id-redirect-vs.yaml"
+            "file:///Users/jamie/code/oneid/kubernetes/din-dev-lab/dev-lab-europe-west2/skaffold/infra/bank-id-redirect-httproute.yaml"
         ]
     },
     "[dockercompose]": {

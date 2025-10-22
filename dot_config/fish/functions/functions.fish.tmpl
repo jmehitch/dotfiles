@@ -19,8 +19,10 @@ end
 function tss
     if test -n "$argv"
         ts switch $argv
+        tsup
     else
         ts switch $(ts switch --list | grep -v ID | grep -v '*' | awk '{ print $3 }')
+        tsup
     end
 end
 
@@ -28,21 +30,32 @@ end
 function tsup
     if test -n "$argv"
         if test $argv[1] = "exit"
-            set FLAG --exit-node=$(ts exit-node list --filter=uk | grep mnc | tail -n 1 | awk '{ print $ 2 }') --exit-node-allow-lan-access=true
+            set FLAG1 --exit-node=$(ts exit-node list --filter=uk | grep mnc | tail -n 1 | awk '{ print $ 2 }') --exit-node-allow-lan-access=true
         else if test $argv[1] = "lon"
-            set FLAG --exit-node=$(ts exit-node list --filter=uk | grep lon | tail -n 1 | awk '{ print $ 2 }') --exit-node-allow-lan-access=true
+            set FLAG1 --exit-node=$(ts exit-node list --filter=uk | grep lon | tail -n 1 | awk '{ print $ 2 }') --exit-node-allow-lan-access=true
         else if test $argv[1] = "man"
-            set FLAG --exit-node=$(ts exit-node list --filter=uk | grep mnc | tail -n 1 | awk '{ print $ 2 }') --exit-node-allow-lan-access=true
+            set FLAG1 --exit-node=$(ts exit-node list --filter=uk | grep mnc | tail -n 1 | awk '{ print $ 2 }') --exit-node-allow-lan-access=true
         else
             echo "arg $argv[1] not accepted."
             return 1
         end
     else
-        set FLAG "--accept-routes"
+        set current_account (ts switch --list | grep -v ID | grep '*' | awk '{ print $3 }')
+        if test "$current_account" = "p*"
+            echo "Logged in account is 'personal'"
+            set FLAG1 --accept-routes=false
+            set FLAG2 --accept-dns=true
+            set FLAG3 --exit-node=$(ts exit-node list --filter=uk | grep mnc | tail -n 1 | awk '{ print $ 2 }') --exit-node-allow-lan-access=true
+        else
+            echo "Logged in account is 'work'"
+            set FLAG1 --accept-routes=true
+            set FLAG2 --accept-dns=false
+        end
     end
 
     ts up --reset &> /dev/null
-    ts up $FLAG
+    ts up $FLAG1 $FLAG2 $FLAG3
+    echo "Connected to tailnet with: 'ts up $FLAG1 $FLAG2 $FLAG3'"
 end
 
 # commit and push
