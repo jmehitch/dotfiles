@@ -39,7 +39,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # restart dock
 killall Dock
 
-# set wifi dns server to cloudflare
-networksetup -setdnsservers Wi-Fi 1.1.1.1
+# set wifi dns server to cloudflare: https://one.one.one.one/dns/
+networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
 
 {{ end -}}
