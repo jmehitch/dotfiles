@@ -26,7 +26,7 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 100,
     "go.useLanguageServer": true,
-    "go.formatTool": "goimports",
+    // "go.formatTool": "goimports",
     "go.toolsManagement.autoUpdate": true,
     "[javascript]": {
         "editor.formatOnSave": true,
@@ -76,7 +76,6 @@
         "taskfile"
     ],
     "githubPullRequests.pullBranch": "never",
-    "terminal.integrated.defaultProfile.osx": "tmux",
     "terminal.integrated.profiles.osx": {
         "bash": {
             "path": "bash",
@@ -109,7 +108,8 @@
             "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/arc.yaml",
             "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/loki.yaml",
             "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/values/loki.yaml",
-            "file:///Users/jamie/code/oneid/kubernetes/din-dev-lab/dev-lab-europe-west2/skaffold/infra/bank-id-redirect-httproute.yaml"
+            "file:///Users/jamie/code/oneid/kubernetes/din-dev-lab/dev-lab-europe-west2/skaffold/infra/bank-id-redirect-httproute.yaml",
+            "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/values/arc.yaml",
         ]
     },
     "[dockercompose]": {
@@ -120,5 +120,7 @@
     },
     "[github-actions-workflow]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
-    }
+    },
+    "cursor.composer.usageSummaryDisplay": "always",
+    "cursor.cpp.enablePartialAccepts": true
 }
