@@ -1,5 +1,4 @@
 {
-    "telemetry.telemetryLevel": "off",
     "extensions.ignoreRecommendations": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "explorer.confirmDragAndDrop": false,
@@ -37,7 +36,7 @@
         "editor.detectIndentation": false,
         "editor.tabSize": 2,
         "editor.insertSpaces": true,
-        "editor.defaultFormatter": "redhat.vscode-yaml"
+        "editor.defaultFormatter": "redhat.vscode-yaml",
     },
     "[terraform]": {
         "editor.formatOnSave": true,
@@ -52,7 +51,6 @@
         "rewrap.wrappingColumn": 100
     },
     "redhat.telemetry.enabled": false,
-    "markdown-preview-enhanced.previewTheme": "github-light.css",
     "vs-kubernetes": {
         "vs-kubernetes.crd-code-completion": "disabled"
     },
@@ -111,6 +109,7 @@
             "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/values/arc.yaml",
         ]
     },
+    "yaml.format.printWidth": 10000,
     "[dockercompose]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2,
