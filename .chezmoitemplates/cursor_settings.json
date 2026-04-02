@@ -4,7 +4,6 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "explorer.confirmDragAndDrop": false,
     "workbench.colorTheme": "GitHub Dark",
-    "workbench.iconTheme": "material-icon-theme",
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.preferredLightColorTheme": "GitHub Light",
     "window.autoDetectHighContrast": false,
@@ -122,5 +121,8 @@
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "cursor.composer.usageSummaryDisplay": "always",
-    "cursor.cpp.enablePartialAccepts": true
+    "cursor.cpp.enablePartialAccepts": true,
+    "[helm]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    }
 }
