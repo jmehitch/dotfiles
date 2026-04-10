@@ -123,5 +123,6 @@
     "cursor.cpp.enablePartialAccepts": true,
     "[helm]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
-    }
+    },
+    "workbench.iconTheme": "material-icon-theme"
 }
