@@ -25,13 +25,6 @@ else if test -d /opt/homebrew # macos
 end
 fish_add_path -gP "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin"
 
-# mise
-if status is-interactive
-    ~/.local/bin/mise activate fish | source
-else
-    ~/.local/bin/mise activate fish --shims | source
-end
-
 # activate zoxide
 zoxide init fish | source
 

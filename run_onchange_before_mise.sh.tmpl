@@ -1,7 +1,7 @@
 #!/bin/bash
 # mise config hash: {{ include "dot_config/mise/config.toml" | sha256sum }}
 set -e
-eval "$(~/.local/bin/mise activate bash)"
+eval "$($(which mise) activate bash)"
 mise use -g python
-pip install --user pipx
+mise exec -- pip install --user pipx
 mise install

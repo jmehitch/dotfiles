@@ -2,7 +2,7 @@
 
 set -e
 
-eval "$(~/.local/bin/mise activate bash)"
+eval "$($(which mise) activate bash)"
 mise use -g aqua:cli/cli aqua:jqlang/jq npm:@bitwarden/cli
 
 if [[ ! -f ~/.ssh/id_ed25519 ]]; then
