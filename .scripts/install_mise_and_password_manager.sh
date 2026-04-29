@@ -2,9 +2,14 @@
 
 set -e
 
+if ! command -v mise >/dev/null 2>&1; then
+    curl https://mise.run | sh
+fi
+
 # exit immediately if bitwarden-cli is already in $PATH
 type bw >/dev/null 2>&1 && exit
 
 eval "$($(which mise) activate bash)"
 mise use -g node
-mise use -g npm:@bitwarden/cli
+mise use -g npm:@bitwarden/cli@2026.4.1
+

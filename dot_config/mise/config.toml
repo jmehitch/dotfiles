@@ -18,7 +18,7 @@ node = "latest"
 "ubi:ajeetdsouza/zoxide" = "0.9.9"
 "ubi:starship/starship" = "1.24.2"
 "ubi:sharkdp/bat" = "0.26.1"
-"ubi:yt-dlp/yt-dlp" = "2026.03.17"
+# "ubi:yt-dlp/yt-dlp" = "2026.03.17"
 "ubi:pranshuparmar/witr" = "0.3.1"
 # go
 "go:github.com/kubecolor/kubecolor" = "0.5.3"
