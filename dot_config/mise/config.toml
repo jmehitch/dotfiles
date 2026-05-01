@@ -10,19 +10,19 @@ rust = "latest"
 node = "latest"
 # aqua + github
 "aqua:jqlang/jq" = "1.8.1"
-"aqua:a8m/envsubst" = "1.4.3"
-"aqua:go-task/task" = "3.49.1"
-"aqua:cli/cli" = "2.89.0" # gh
-"aqua:junegunn/fzf" = "0.70.0"
-"aqua:bitwarden/clients" = "2026.2.0"
+"aqua:bitwarden/clients" = "2026.4.1"
+"github:a8m/envsubst" = "1.4.3"
+"github:go-task/task" = "3.49.1"
+"github:cli/cli" = "2.89.0" # gh
+"github:junegunn/fzf" = "0.70.0"
 "github:ajeetdsouza/zoxide" = "0.9.9"
 "github:starship/starship" = "1.24.2"
 "github:sharkdp/bat" = "0.26.1"
 "github:yt-dlp/yt-dlp" = "2026.03.17"
 "github:pranshuparmar/witr" = "0.3.1"
+"github:dandavison/delta" = "0.16.5"
 # go
 "go:github.com/kubecolor/kubecolor" = "0.5.3"
 "go:github.com/ankitpokhrel/jira-cli/cmd/jira" = "1.7.0"
 # pipx
 "pipx:icdiff" = "2.0.7"
-"aqua:dandavison/delta" = "0.16.5"

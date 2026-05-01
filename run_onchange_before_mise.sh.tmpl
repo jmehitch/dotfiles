@@ -4,4 +4,5 @@ set -e
 eval "$($(which mise) activate bash)"
 mise use -g python
 mise x -- pip install --user pipx
+mise x -- pip install --upgrade pip
 mise install
