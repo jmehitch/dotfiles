@@ -1,128 +1,120 @@
 {
-    "extensions.ignoreRecommendations": true,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "explorer.confirmDragAndDrop": false,
-    "workbench.colorTheme": "GitHub Dark",
-    "workbench.preferredDarkColorTheme": "GitHub Dark",
-    "workbench.preferredLightColorTheme": "GitHub Light",
-    "window.autoDetectHighContrast": false,
-    "window.autoDetectColorScheme": true,
-    "terminal.integrated.fontSize": 15,
-    "terminal.integrated.fontFamily": "InconsolataGo Nerd Font Mono",
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.cursorStyle": "block",
-    "terminal.integrated.copyOnSelection": true,
-    "editor.fontFamily": "InconsolataGo Nerd Font Mono",
-    "editor.fontSize": 14,
-    "editor.accessibilitySupport": "off",
-    "editor.cursorStyle": "line-thin",
-    "editor.suggestSelection": "first",
-    "editor.minimap.enabled": false,
-    "files.eol": "\n",
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 100,
-    "go.useLanguageServer": true,
-    // "go.formatTool": "goimports",
-    "go.toolsManagement.autoUpdate": true,
-    "[javascript]": {
-        "editor.formatOnSave": true,
-        "editor.detectIndentation": true,
-        "editor.tabSize": 2,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "extensions.ignoreRecommendations": true,
+
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.preferredDarkColorTheme": "GitHub Dark",
+  "workbench.preferredLightColorTheme": "GitHub Light",
+  "window.autoDetectColorScheme": true,
+  "window.autoDetectHighContrast": false,
+
+  "diffEditor.ignoreTrimWhitespace": false,
+  "explorer.confirmDragAndDrop": false,
+  "git.autofetch": true,
+  "githubPullRequests.pullBranch": "never",
+
+  "editor.accessibilitySupport": "off",
+  "editor.codeLensFontSize": 1,
+  "editor.cursorStyle": "line-thin",
+  "editor.fontFamily": "InconsolataGo Nerd Font Mono",
+  "editor.fontSize": 14,
+  "editor.minimap.enabled": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 100,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.fontFamily": "InconsolataGo Nerd Font Mono",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": ["-l"],
+      "icon": "terminal-bash"
     },
-    "[yaml]": {
-        "editor.detectIndentation": false,
-        "editor.tabSize": 2,
-        "editor.insertSpaces": true,
-        "editor.defaultFormatter": "redhat.vscode-yaml",
+    "zsh": {
+      "path": "zsh",
+      "args": ["-l"]
     },
-    "[terraform]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "hashicorp.terraform",
-        "editor.tabSize": 2
+    "fish": {
+      "path": "fish",
+      "args": ["-l"]
     },
-    "[markdown]": {
-        "editor.rulers": [
-            100
-        ],
-        "rewrap.autoWrap.enabled": false,
-        "rewrap.wrappingColumn": 100
-    },
-    "redhat.telemetry.enabled": false,
-    "vs-kubernetes": {
-        "vs-kubernetes.crd-code-completion": "disabled"
-    },
-    "git.autofetch": true,
-    "editor.codeLensFontSize": 1,
-    "cSpell.dark": {},
-    "cSpell.allowCompoundWords": true,
-    "cSpell.userWords": [
-        "consentconsole",
-        "ctxutils",
-        "endtoend",
-        "firestore",
-        "GOBIN",
-        "GOPKG",
-        "idpconfig",
-        "managementconsole",
-        "myoneid",
-        "oneid",
-        "rpconfig",
-        "taskfile"
-    ],
-    "githubPullRequests.pullBranch": "never",
-    "terminal.integrated.profiles.osx": {
-        "bash": {
-            "path": "bash",
-            "args": [
-                "-l"
-            ],
-            "icon": "terminal-bash"
-        },
-        "zsh": {
-            "path": "zsh",
-            "args": [
-                "-l"
-            ]
-        },
-        "fish": {
-            "path": "fish",
-            "args": [
-                "-l"
-            ]
-        },
-        "tmux": {
-            "path": "tmux",
-            "args": ["new-session", "-A", "-s", "cursor:${workspaceFolder}"]
-        }
-    },
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "cursor.composer.shouldChimeAfterChatFinishes": true,
-    "yaml.schemas": {
-        "https://www.schemastore.org/yamllint.json": [
-            "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/arc.yaml",
-            "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/loki.yaml",
-            "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/values/loki.yaml",
-            "file:///Users/jamie/code/oneid/kubernetes/din-dev-lab/dev-lab-europe-west2/skaffold/infra/bank-id-redirect-httproute.yaml",
-            "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/values/arc.yaml",
-        ]
-    },
-    "yaml.format.printWidth": 10000,
-    "[dockercompose]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.autoIndent": "advanced",
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "[github-actions-workflow]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "cursor.composer.usageSummaryDisplay": "always",
-    "cursor.cpp.enablePartialAccepts": true,
-    "[helm]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "workbench.iconTheme": "material-icon-theme"
+    "tmux": {
+      "path": "tmux",
+      "args": ["new-session", "-A", "-s", "cursor:${workspaceFolder}"]
+    }
+  },
+
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.composer.usageSummaryDisplay": "always",
+  "cursor.cpp.enablePartialAccepts": true,
+
+  "cSpell.allowCompoundWords": true,
+  "cSpell.userWords": [
+    "consentconsole",
+    "ctxutils",
+    "endtoend",
+    "firestore",
+    "GOBIN",
+    "GOPKG",
+    "idpconfig",
+    "managementconsole",
+    "myoneid",
+    "oneid",
+    "rpconfig",
+    "taskfile"
+  ],
+
+  "go.toolsManagement.autoUpdate": true,
+  "redhat.telemetry.enabled": false,
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "disabled"
+  },
+
+  "yaml.format.printWidth": 10000,
+  "yaml.format.singleQuote": true,
+  "yaml.schemas": {
+    "https://www.schemastore.org/yamllint.json": [
+      "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/arc.yaml",
+      "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/loki.yaml",
+      "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/values/arc.yaml",
+      "file:///Users/jamie/code/oneid/infrastructure/kubernetes/envs/din-internal/internal-europe-west2/charts/values/loki.yaml",
+      "file:///Users/jamie/code/oneid/kubernetes/din-dev-lab/dev-lab-europe-west2/skaffold/infra/bank-id-redirect-httproute.yaml"
+    ]
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.detectIndentation": true,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2
+  },
+  "[dockercompose]": {
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.tabSize": 2
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[helm]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  }
 }
