@@ -29,6 +29,18 @@ if status is-interactive
     # activate mise
     $HOME/.local/bin/mise activate fish | source
 
+    # Work around mise [env] MISE_ENV chicken-and-egg: when a project's
+    # mise.toml sets MISE_ENV via [env] to additionally load a
+    # mise.<env>.toml (e.g. oneid uses MISE_ENV=ci -> mise.ci.toml for
+    # kubectl/gcloud/etc.), the first hook-env resolves tools BEFORE
+    # MISE_ENV is applied, so env-specific tools are missing from PATH and
+    # mise's __MISE_DIFF cache then suppresses the fix on later prompts.
+    # If MISE_ENV ended up set, bust the diff and re-run hook-env once.
+    if set -q MISE_ENV
+        set -e __MISE_DIFF
+        $HOME/.local/bin/mise hook-env -s fish | source
+    end
+
     # activate zoxide
     zoxide init fish | source
 
