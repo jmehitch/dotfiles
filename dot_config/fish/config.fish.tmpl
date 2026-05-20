@@ -25,17 +25,19 @@ else if test -d /opt/homebrew # macos
 end
 fish_add_path -gP "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin"
 
-# activate mise
-~/.local/bin/mise activate fish | source
+if status is-interactive
+    # activate mise
+    $HOME/.local/bin/mise activate fish | source
 
-# activate zoxide
-zoxide init fish | source
+    # activate zoxide
+    zoxide init fish | source
 
-# activate starship
-starship init fish | source
+    # activate starship
+    starship init fish | source
 
-# task fish completions
-task --completion fish | source
+    # task fish completions
+    task --completion fish | source
+end
 
 {{ if eq .chezmoi.os "darwin" -}}
 # jira api token

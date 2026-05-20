@@ -2,6 +2,9 @@
 experimental = true
 lockfile = true
 
+[settings.python]
+compile = true
+
 [tools]
 # core
 go = "latest"
@@ -26,3 +29,4 @@ node = "latest"
 "go:github.com/ankitpokhrel/jira-cli/cmd/jira" = "1.7.0"
 # pipx
 "pipx:icdiff" = "2.0.7"
+"aqua:anthropics/claude-code" = "2.1.126"
