@@ -65,6 +65,7 @@ packages:
     cursor:
       - eamodio.gitlens
       - esbenp.prettier-vscode
+      - dbaeumer.vscode-eslint
       - github.github-vscode-theme
       - golang.go
       - hashicorp.terraform
@@ -75,6 +76,7 @@ packages:
       - anthropic.claude-code
       - eamodio.gitlens
       - esbenp.prettier-vscode
+      - dbaeumer.vscode-eslint
       - github.github-vscode-theme
       - golang.go
       - hashicorp.terraform
