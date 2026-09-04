@@ -1,5 +1,6 @@
 {
   "telemetry.telemetryLevel": "off",
+  "telemetry.feedback.enabled": false,
 
   "extensions.ignoreRecommendations": true,
 
@@ -11,6 +12,8 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.preferredDarkColorTheme": "GitHub Dark",
   "workbench.preferredLightColorTheme": "GitHub Light",
+  "workbench.startupEditor": "none",
+
   "window.autoDetectColorScheme": true,
 
   "terminal.integrated.fontSize": 14,
@@ -65,7 +68,7 @@
     "vs-kubernetes.crd-code-completion": "disabled"
   },
 
-  "claudeCode.preferredLocation": "panel",
+  "gitlens.telemetry.enabled": false,
 
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "cursor.composer.usageSummaryDisplay": "always",
