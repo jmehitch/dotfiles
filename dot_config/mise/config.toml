@@ -11,9 +11,12 @@ go = "latest"
 python = "latest"
 rust = "latest"
 node = "latest"
+uv = "latest"
+pnpm = "latest"
 # aqua + github
 "aqua:jqlang/jq" = "1.8.1"
 "aqua:bitwarden/clients" = "2026.4.1"
+"aqua:anthropics/claude-code" = "2.1.220"
 "github:a8m/envsubst" = "1.4.3"
 "github:go-task/task" = "3.49.1"
 "github:cli/cli" = "2.89.0" # gh
@@ -29,4 +32,3 @@ node = "latest"
 "go:github.com/ankitpokhrel/jira-cli/cmd/jira" = "1.7.0"
 # pipx
 "pipx:icdiff" = "2.0.7"
-"aqua:anthropics/claude-code" = "2.1.126"

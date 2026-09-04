@@ -55,3 +55,9 @@ end
 # jira api token
 set -gx JIRA_API_TOKEN {{ (bitwardenFields "item" "atlassian-creds").api_token.value }}
 {{ end -}}
+
+{{ if eq .chezmoi.os "darwin" -}}
+# github rate limit token
+set -gx GITHUB_TOKEN {{ (bitwardenFields "item" "github-pat").api_token.value }}
+{{ end -}}
+

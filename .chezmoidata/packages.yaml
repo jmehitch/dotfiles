@@ -63,20 +63,21 @@ packages:
       - app: Amphetamine
         id: 937984704
     cursor:
-      - anysphere.cursorpyright
-      - anysphere.pyright
-      - anysphere.remote-ssh
-      - dbaeumer.vscode-eslint
       - eamodio.gitlens
       - esbenp.prettier-vscode
       - github.github-vscode-theme
-      - github.vscode-pull-request-github
       - golang.go
       - hashicorp.terraform
-      - mohsen1.prettify-json
-      - ms-azuretools.vscode-docker
       - ms-kubernetes-tools.vscode-kubernetes-tools
-      - ms-python.debugpy
-      - ms-python.python
+      - pkief.material-icon-theme
       - redhat.vscode-yaml
-      - streetsidesoftware.code-spell-checker
+    vscodium:
+      - anthropic.claude-code
+      - eamodio.gitlens
+      - esbenp.prettier-vscode
+      - github.github-vscode-theme
+      - golang.go
+      - hashicorp.terraform
+      - ms-kubernetes-tools.vscode-kubernetes-tools
+      - pkief.material-icon-theme
+      - redhat.vscode-yaml

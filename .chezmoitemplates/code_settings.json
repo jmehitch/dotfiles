@@ -1,0 +1,73 @@
+{
+  "telemetry.telemetryLevel": "off",
+
+  "extensions.ignoreRecommendations": true,
+
+  "explorer.confirmDragAndDrop": false,
+
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.preferredDarkColorTheme": "GitHub Dark",
+  "workbench.preferredLightColorTheme": "GitHub Light",
+  "window.autoDetectColorScheme": true,
+
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "InconsolataGo Nerd Font Mono",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.copyOnSelection": true,
+
+  "editor.fontSize": 14,
+  "editor.fontFamily": "InconsolataGo Nerd Font Mono",
+  "editor.accessibilitySupport": "off",
+  "editor.cursorStyle": "line-thin",
+  "editor.suggestSelection": "first",
+  "editor.minimap.enabled": false,
+
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 100,
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.detectIndentation": true,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.rulers": [
+      100
+    ]
+  },
+
+  "go.useLanguageServer": true,
+  "go.toolsManagement.autoUpdate": true,
+
+  "redhat.telemetry.enabled": false,
+
+  "yaml.format.enable": false,
+
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "disabled"
+  },
+
+  "claudeCode.preferredLocation": "panel",
+
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.composer.usageSummaryDisplay": "always",
+  "cursor.cpp.enablePartialAccepts": true
+}
