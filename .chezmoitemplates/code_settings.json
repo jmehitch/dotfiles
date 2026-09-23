@@ -51,6 +51,9 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 2
   },
+  "[json]": {
+    "editor.tabSize": 2
+  },
   "[markdown]": {
     "editor.rulers": [
       100
@@ -72,5 +75,7 @@
 
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "cursor.composer.usageSummaryDisplay": "always",
-  "cursor.cpp.enablePartialAccepts": true
+  "cursor.cpp.enablePartialAccepts": true,
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.hideOnboarding": true
 }
