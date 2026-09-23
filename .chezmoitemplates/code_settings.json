@@ -75,6 +75,7 @@
 
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "cursor.composer.usageSummaryDisplay": "always",
+  "cursor.composer.queueMessageDefaultBehavior": "steer",
   "cursor.cpp.enablePartialAccepts": true,
   "claudeCode.preferredLocation": "panel",
   "claudeCode.hideOnboarding": true

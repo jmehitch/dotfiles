@@ -1,5 +1,5 @@
 alias l="ls -alh"
-alias cat="bat --theme=\"Monokai Extended Bright\""
+alias cat="bat --theme auto:system --theme-dark default --theme-light GitHub"
 alias gst="git status"
 alias gd="git diff"
 alias gds="git diff --staged"
@@ -35,4 +35,4 @@ alias lab="kubectx gke-dev-lab"
 alias diff="icdiff"
 alias myip="curl ipinfo.io"
 alias code="codium"
-alias curspers="/Applications/Cursor\ Personal.app/Contents/MacOS/Cursor --user-data-dir=$HOME/.cursor-personal --extensions-dir=$HOME/.cursor-personal/extensions"
+
