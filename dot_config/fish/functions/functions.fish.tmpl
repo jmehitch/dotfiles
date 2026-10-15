@@ -105,6 +105,33 @@ function gitamend
     printf "added changes to previous commit: `%s`\n" "$COMMIT_MSG"
 end
 
+# git worktree branch: create a worktree for a branch alongside the main repo and cd into it
+function gwb
+    if test (count $argv) -ne 1
+        echo "usage: gwb BRANCH_NAME"
+        return 1
+    end
+
+    if not git rev-parse --git-dir >/dev/null 2>/dev/null
+        echo "error: not in a git repository"
+        return 1
+    end
+
+    set -l BRANCH_NAME $argv[1]
+
+    # resolve the main worktree so nested calls don't produce repo_branch1_branch2
+    set -l CURRENT_REPO (git worktree list --porcelain | head -n 1 | string replace 'worktree ' '')
+    set -l WORKTREE_PATH "$CURRENT_REPO"_(string replace -a '/' '-' $BRANCH_NAME)
+
+    if git show-ref --verify --quiet "refs/heads/$BRANCH_NAME"; or git show-ref --verify --quiet "refs/remotes/origin/$BRANCH_NAME"
+        git worktree add "$WORKTREE_PATH" "$BRANCH_NAME"; or return $status
+    else
+        git worktree add -b "$BRANCH_NAME" "$WORKTREE_PATH"; or return $status
+    end
+
+    cd "$WORKTREE_PATH"
+end
+
 {{ if eq .chezmoi.os "darwin" -}}
 # create jira ticket
 function jira_create

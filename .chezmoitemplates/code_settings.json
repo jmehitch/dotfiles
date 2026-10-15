@@ -78,5 +78,6 @@
   "cursor.composer.queueMessageDefaultBehavior": "steer",
   "cursor.cpp.enablePartialAccepts": true,
   "claudeCode.preferredLocation": "panel",
-  "claudeCode.hideOnboarding": true
+  "claudeCode.hideOnboarding": true,
+  "debug.breakpointsView.presentation": "tree"
 }

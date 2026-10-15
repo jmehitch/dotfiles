@@ -61,3 +61,5 @@ set -gx JIRA_API_TOKEN {{ (bitwardenFields "item" "atlassian-creds").api_token.v
 set -gx GITHUB_TOKEN {{ (bitwardenFields "item" "github-pat").api_token.value }}
 {{ end -}}
 
+# claude disable all telemetry
+set -gx CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC 1
